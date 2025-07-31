@@ -1,0 +1,43 @@
+mixin imageBtn(img)
+  <button class="ImageButton" onclick="OnImageButtonClick('#{img}')">
+    <img src="#{img}" alt="image">
+  </button>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HomeWork 01</title>
+  <link rel="stylesheet" href="/css/IndexStyle.css">
+  <script src="/js/jquery-3.4.1.min.js"></script>
+  <script src="/js/IndexScript.js"></script>
+</head>
+<body>
+  <header>
+    <div class="HeaderInnerDiv">
+      <a href="/" class="HeaderLink">Картинки</a>
+    </div>
+  </header>
+  <main >
+    <div class="MainContent">
+      each img in images
+        +imageBtn(img)
+      
+      <button class="ImageButton Add" onclick="OnImageAddButtonClick()">
+        <input name="file1" id="FileChooser" multiple onchange="OnFilesChanged()" style="display: none;" onclick="event.stopPropagation()" type="file" accept="image/png, image/jpeg, image/jpg, image/bmp"/>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path d="M256 112v288M400 256H112"/>
+          </svg>
+        </div>
+      </button>
+    </div>
+  </main>
+  <footer>
+    <p class="FooterContent">Конец</p>
+    <p class="FooterPrivacity">© Крамаренко Михаил, 2021</p>
+  </footer>
+</body>
+</html>
+

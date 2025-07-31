@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: 'Poppins';
+  font-family: 'Roboto';
+  box-sizing: border-box;
+}
+
+
+body{
+  min-height: 100vh;
+  display: block;
+  width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+header{
+  width: 100%;
+  height: 60px;
+  background: #333;
+  padding: 0 20px;
+  display: flex;
+  align-items: stretch;
+  flex-shrink: 0;
+}
+
+.HeaderInnerDiv{
+  display: flex;
+  align-items: stretch;
+  max-width: 100%;
+  width: 1400px;
+  margin: 0 auto;
+}
+
+.HeaderLink{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background: transparent;
+  width: max-content;
+  text-decoration: none;
+  font-size: 20px;
+  transition: background 0.2s;
+  padding: 0 20px;
+}
+
+.HeaderLink:focus,
+.HeaderLink:hover{
+  background: rgba(255, 255, 255, 0.2);
+}
+
+main{
+  display: flex;
+  align-items: stretch;
+  background: #fff;
+  height: max-content;
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 20px;
+}
+
+.MainContent{
+  max-width: 100%;
+  width: 100%;
+}
+
+.ImageDiv{
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+
+.Image{
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 400px;
+  display: block;
+  object-fit: contain;
+  opacity: 1;
+  animation: ImageAnim 0.5s linear;
+}
+
+@keyframes ImageAnim {
+  0%{
+    opacity: 0;
+    }
+  100%{
+    opacity: 1;
+    }
+}
+
+.ButtonsContainer{
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+}
+
+.Button{
+  background: white;
+  border: 2px black solid;
+  font-size: 25px;
+  padding: 5px 20px;
+  display: block;
+  margin-right: 20px;
+  border-radius: 0px;
+  user-select: none;
+  transition: background 0.2s, color 0.2s, border-color 0.2s, border-radius 0.2s;
+}
+
+.Button:focus,
+.Button:hover{
+  background: #000;
+  color: #fff;
+  border-radius: 25px;
+}
+
+.Button.Delete:focus,
+.Button.Delete:hover{
+  border-color: #f00;
+  background: #f00;
+  color: #fff;
+}
+
+.Button.Back:focus,
+.Button.Back:hover{
+  border-color: #00f;
+  background: #00f;
+  color: #fff;
+}
+
+footer{
+  flex-shrink: 0;
+  margin-top: auto;
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.FooterContent{
+  display: block;
+  width: max-content;
+  margin: 0 auto;
+  max-width: 100%;
+  font-size: 30px;
+}
+
+.FooterPrivacity{
+  margin-top: -15px;
+  display: block;
+  width: max-content;
+  margin-left: 5px;
+}

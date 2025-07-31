@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: 'Poppins';
+  font-family: 'Roboto';
+  box-sizing: border-box;
+}
+
+
+body{
+  min-height: 100vh;
+  display: block;
+  width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+header{
+  width: 100%;
+  height: 60px;
+  background: #333;
+  padding: 0 20px;
+  display: flex;
+  align-items: stretch;
+  flex-shrink: 0;
+}
+
+.HeaderInnerDiv{
+  display: flex;
+  align-items: stretch;
+  max-width: 100%;
+  width: 1400px;
+  margin: 0 auto;
+}
+
+.HeaderLink{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background: transparent;
+  width: max-content;
+  text-decoration: none;
+  font-size: 20px;
+  transition: background 0.2s;
+  padding: 0 20px;
+}
+
+.HeaderLink:focus,
+.HeaderLink:hover{
+  background: rgba(255, 255, 255, 0.2);
+}
+
+main{
+  display: flex;
+  align-items: stretch;
+  background: #fff;
+  height: max-content;
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 20px;
+}
+
+.MainContent{
+  max-width: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-auto-rows: minmax(auto, 150px);
+  column-gap: 20px;
+  row-gap: 10px;
+}
+
+.ImageButton{
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border: 2px black solid;
+  background: black;
+  margin-right: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+  transform: scale(0.95);
+  transition: transform 0.2s;
+  animation: StartOmageAnim 0.3s linear;
+}
+
+.ImageButton:focus,
+.ImageButton:hover{
+  transform: scale(1.1);
+}
+
+@keyframes StartOmageAnim {
+  0%{
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(0.95);
+  }
+}
+
+.ImageButton > img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.ImageButton.Add{
+  background: #666;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.ImageButton.Add:focus,
+.ImageButton.Add:hover{
+  background: #333;
+}
+
+.ImageButton.Add > div{
+  display: block;
+  width: 130px;
+  height: 130px;
+  transform: translateX(5px);
+  pointer-events: none;
+  stroke-width: 50;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform: rotate(0deg);
+  transition: transform 0.3s;
+}
+
+.ImageButton.Add:hover > div{
+  transition: transform 0.5s;
+  transform: rotate(180deg);
+}
+
+.ImageButton.Add > div > svg{
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #fff;
+}
+
+footer{
+  flex-shrink: 0;
+  margin-top: auto;
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.FooterContent{
+  display: block;
+  width: max-content;
+  margin: 0 auto;
+  max-width: 100%;
+  font-size: 30px;
+}
+
+.FooterPrivacity{
+  margin-top: -15px;
+  display: block;
+  width: max-content;
+  margin-left: 5px;
+}
